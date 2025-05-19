@@ -6,9 +6,6 @@ import { Box, Button, Link } from "@mui/material";
 export default function User() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
-  function UserDetails() {
-    navigate("/UserDetails");
-  }
   return (
     <div>
       <h2>Lista de Usuarios:</h2>
@@ -22,7 +19,7 @@ export default function User() {
                 component="button"
                 variant="body1"
                 onClick={() => {
-                  UserDetails();
+                  navigate('/UserDetails', { state: u });
                 }}
               >
                 Detalles
