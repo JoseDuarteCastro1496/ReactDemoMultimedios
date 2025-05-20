@@ -11,11 +11,13 @@ export default function Footer() {
         color: 'primary.contrastText',
         py: 4,
         mt: 'auto',
+        height:"100px",
+        minHeight: '28vh',
       }}
     >
       <Container maxWidth="lg" sx={{height:150}} >
         <Grid container spacing={12} justifyContent="space-between">
-          <Grid item xs={12} md={4} sx={{ display:'flex',flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor: 'red' }}>
+          <Grid item xs={12} md={4} sx={{ display:'flex',flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
             <Typography variant="h6" gutterBottom>
               MiSitio
             </Typography>
@@ -23,12 +25,11 @@ export default function Footer() {
               © {new Date().getFullYear()} MiSitio. Todos los derechos reservados.
             </Typography>
           </Grid>
-
-          <Grid item xs={12} md={4} sx={{ textAlign: 'center', backgroundColor: 'yellow' }}>
-            <Typography variant="h6" gutterBottom>
+          <Grid item xs={12} md={4} >
+            <Typography pb={0} variant="h6" gutterBottom>
               Enlaces
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            <Box sx={{display:"flex", justifyContent:"center", alignItems:"center",gap:2}}>
               <Link href="/" color="inherit" underline="hover">
                 Inicio
               </Link>
@@ -43,8 +44,7 @@ export default function Footer() {
               </Link>
             </Box>
           </Grid>
-
-          <Grid item xs={12} md={4} sx={{ textAlign: 'center', backgroundColor: 'blue' }}>
+          <Grid item xs={12} md={4} sx={{ display:"flex", textAlign: 'center', justifyContent:"center", alignItems:"center" }}>
             <Typography variant="h6" gutterBottom>
               Síguenos
             </Typography>

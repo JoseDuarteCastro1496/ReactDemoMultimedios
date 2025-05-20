@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Link,Typography  } from "@mui/material";
+import { Box, Button, Link, Typography, Skeleton } from "@mui/material";
 import FormularioDeUsuarios from "../Dialog";
 import AddTaskIcon from '@mui/icons-material/AddTask';
 
@@ -37,14 +37,14 @@ export default function User() {
                 variant="body2"
                 onClick={() => navigate('/UserDetails', { state: u })}
                 sx={{
-    color: 'primary.main', 
-    '&:hover': {
-      color: 'secondary.main',
-    },
-    '&:active': {
-      color: 'error.main', 
-    },
-  }}
+                  color: 'primary.main',
+                  '&:hover': {
+                    color: 'secondary.main',
+                  },
+                  '&:active': {
+                    color: 'error.main',
+                  },
+                }}
               >
                 Detalles
               </Link>
@@ -52,9 +52,27 @@ export default function User() {
           ))}
         </Box>
       ) : (
-        <p>Cargando...</p>
+        <Box>
+          {[...Array(5)].map((_, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '5px 15px',
+                borderBottom: '1px solid #ccc',
+                borderRadius: 1,
+                backgroundColor: '#f9f9f9',
+                mb: 1,
+              }}
+            >
+              <Skeleton variant="text" width="40%" height={30} />
+              <Skeleton variant="text" width="20%" height={25} />
+            </Box>
+          ))}
+        </Box>
       )}
     </div>
   );
 }
-
