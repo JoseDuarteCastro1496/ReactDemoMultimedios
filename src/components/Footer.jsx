@@ -13,9 +13,9 @@ export default function Footer() {
         mt: 'auto',
       }}
     >
-      <Container maxWidth="lg" >
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+      <Container maxWidth="lg" sx={{height:150}} >
+        <Grid container spacing={12} justifyContent="space-between">
+          <Grid item xs={12} md={4} sx={{ display:'flex',flexDirection:"column", justifyContent:"center", alignItems:"center", backgroundColor: 'red' }}>
             <Typography variant="h6" gutterBottom>
               MiSitio
             </Typography>
@@ -24,7 +24,7 @@ export default function Footer() {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sx={{ textAlign: 'center', backgroundColor: 'yellow' }}>
             <Typography variant="h6" gutterBottom>
               Enlaces
             </Typography>
@@ -44,7 +44,7 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sx={{ textAlign: 'center', backgroundColor: 'blue' }}>
             <Typography variant="h6" gutterBottom>
               Síguenos
             </Typography>

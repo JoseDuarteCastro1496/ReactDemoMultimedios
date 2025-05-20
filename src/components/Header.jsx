@@ -61,7 +61,7 @@ export default function NavBar() {
             {links.map(({ label, onClick }) => (
               <Typography
                 key={label}
-                component="button" // mejor que 'a' si no hay href real
+                component="button" 
                 onClick={onClick}
                 sx={{
                   background: "none",
@@ -80,7 +80,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          <Avatar alt="Usuario" src="/assets/avatar.png" />
+          <Avatar alt="Usuario" src="src/assets/IconoSitio.png" />
         </Toolbar>
       </AppBar>
     </Box>
