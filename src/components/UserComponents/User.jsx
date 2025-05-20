@@ -2,12 +2,16 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Link } from "@mui/material";
+import FormularioDeUsuarios from "../Dialog";
+import AddTaskIcon from '@mui/icons-material/AddTask';
 
 export default function User() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
   return (
     <div>
+    <FormularioDeUsuarios  nombre="Registrar Viaje"
+         Icono={AddTaskIcon}/>
       <h2>Lista de Usuarios:</h2>
       {user ? (
         <ul>

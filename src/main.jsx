@@ -1,18 +1,15 @@
 // src/main.jsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import './index.css';
-import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom'; 
 import { UserProvider } from './contexts/UserContext.jsx';
-
-// IMPORTS CORRECTOS PARA MUI v5
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-
+// Componentes
+import App from './App.jsx';
 const themeOptions = createTheme({
   palette: {
-    mode: 'light',            // 'light' o 'dark'
+    mode: 'light',         
     primary: {
       main: '#1dc497',
     },

@@ -2,7 +2,7 @@ import { Box, Button } from '@mui/material'
 
 const BotonGenerico = ({ variante, nombre, tamaño, color, callback }) => {
   return (
-    <Button
+    <Button 
       variant={variante}
       size={tamaño}
       color={color}
